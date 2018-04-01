@@ -16,19 +16,5 @@ export class CalculatorOneComponent{
 	onN2Change(value){
 		this.model.n2 = value;
 	}
-	onAddClick(){
-		this.model.add();
-	}
-
-	onSubtractClick(){
-		this.model.subtract();
-	}
-
-	onMultiplyClick(){
-		this.model.multiply();
-	}
-
-	onDivideClick(){
-		this.model.divide();
-	}
+	
 }
