@@ -8,10 +8,6 @@ import { CalculatorModel  } from './CalculatorModel';
 export class CalculatorTwoComponent{
 	
 	model : CalculatorModel = new CalculatorModel();
-
 	operator : string = 'add';
 
-	onCalculateClick(){
-		this.model[this.operator]();
-	}
 }
