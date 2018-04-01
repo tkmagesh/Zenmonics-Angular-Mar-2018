@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { GreeterComponent } from './greeter/greeter.component';
 import { CalculatorOneComponent } from './calculator/calculatorOne.component';
+import { CalculatorTwoComponent } from './calculator/calculatorTwo.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { CalculatorOneComponent } from './calculator/calculatorOne.component';
     AppComponent
     , GreeterComponent
     , CalculatorOneComponent
+    , CalculatorTwoComponent
   ],
   imports: [
     BrowserModule
