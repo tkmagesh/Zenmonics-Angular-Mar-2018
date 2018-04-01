@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  message = 'Welcome to app!';
-
-  onClearClick(){
-  	this.message = '';
-  }
-
-  onDisplayTimeClick(){
-  	setInterval(() => this.message = new Date(), 1000);
-  }
+  
 }
