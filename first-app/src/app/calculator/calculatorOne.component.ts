@@ -6,34 +6,29 @@ import { CalculatorModel  } from './CalculatorModel';
 	templateUrl : 'calculatorOne.component.html'
 })
 export class CalculatorOneComponent{
-	result : number = 0;
+	
 	model : CalculatorModel = new CalculatorModel();
+	
 
-	onAddClick(n1, n2){
-		this.model.n1 = n1;
-		this.model.n2 = n2;
+	onN1Change(value){
+		this.model.n1 = value;
+	}
+	onN2Change(value){
+		this.model.n2 = value;
+	}
+	onAddClick(){
 		this.model.add();
-		this.result = this.model.result;
 	}
 
-	onSubtractClick(n1, n2){
-		this.model.n1 = n1;
-		this.model.n2 = n2;
+	onSubtractClick(){
 		this.model.subtract();
-		this.result = this.model.result;
 	}
 
-	onMultiplyClick(n1, n2){
-		this.model.n1 = n1;
-		this.model.n2 = n2;
+	onMultiplyClick(){
 		this.model.multiply();
-		this.result = this.model.result;
 	}
 
-	onDivideClick(n1, n2){
-		this.model.n1 = n1;
-		this.model.n2 = n2;
+	onDivideClick(){
 		this.model.divide();
-		this.result = this.model.result;
 	}
 }
