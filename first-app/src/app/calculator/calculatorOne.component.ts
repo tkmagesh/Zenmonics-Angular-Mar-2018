@@ -8,13 +8,4 @@ import { CalculatorModel  } from './CalculatorModel';
 export class CalculatorOneComponent{
 	
 	model : CalculatorModel = new CalculatorModel();
-	
-
-	onN1Change(value){
-		this.model.n1 = value;
-	}
-	onN2Change(value){
-		this.model.n2 = value;
-	}
-	
 }
