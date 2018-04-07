@@ -18,7 +18,7 @@ export class BugTrackerComponent{
 	sortBugBy : string = 'name';
 	sortBugDescending : boolean = false;
 
-	newBugName : string = '';
+	
 
 	constructor(private bugOperations : BugOperationsService){
 		this.bugs.push(this.bugOperations.createNew('Server communications failure'));
@@ -30,11 +30,8 @@ export class BugTrackerComponent{
 	}
 
 	
-	onAddNewClick(){
-		let newBug = this.bugOperations.createNew(this.newBugName);
-		//this.bugs.push(newBug);
+	onNewBugCreated(newBug:Bug){
 		this.bugs = [...this.bugs, newBug];
-		this.newBugName = '';
 	}
 
 	onBugNameClick(bugToToggle : Bug){
