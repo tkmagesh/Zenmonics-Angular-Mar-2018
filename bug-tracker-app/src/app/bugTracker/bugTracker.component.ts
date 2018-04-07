@@ -25,12 +25,15 @@ export class BugTrackerComponent{
 		this.bugs.push(this.bugOperations.createNew('Application not responding'));
 		this.bugs.push(this.bugOperations.createNew('User actions not recognized'));
 		this.bugs.push(this.bugOperations.createNew('Data integrity checks failed'));
+
+		console.log(Promise);
 	}
 
 	
 	onAddNewClick(){
 		let newBug = this.bugOperations.createNew(this.newBugName);
-		this.bugs.push(newBug);
+		//this.bugs.push(newBug);
+		this.bugs = [...this.bugs, newBug];
 		this.newBugName = '';
 	}
 
