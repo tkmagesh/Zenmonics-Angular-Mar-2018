@@ -17,7 +17,9 @@ export class BugTrackerComponent{
 
 	sortBugBy : string = 'name';
 	sortBugDescending : boolean = false;
-	
+
+	newBugName : string = '';
+
 	constructor(private bugOperations : BugOperationsService){
 		this.bugs.push(this.bugOperations.createNew('Server communications failure'));
 		this.bugs.push(this.bugOperations.createNew('Application not responding'));
@@ -26,9 +28,10 @@ export class BugTrackerComponent{
 	}
 
 	
-	onAddNewClick(bugName){
-		let newBug = this.bugOperations.createNew(bugName);
+	onAddNewClick(){
+		let newBug = this.bugOperations.createNew(this.newBugName);
 		this.bugs.push(newBug);
+		this.newBugName = '';
 	}
 
 	onBugNameClick(bug : Bug){
@@ -43,6 +46,7 @@ export class BugTrackerComponent{
 	}
 
 	getClosedCount(){
+		console.log('getClosedCount triggered');
 		let closedCount = 0;
 		for(let index = 0, count = this.bugs.length; index < count; index++){
 			if (this.bugs[index].isClosed)
