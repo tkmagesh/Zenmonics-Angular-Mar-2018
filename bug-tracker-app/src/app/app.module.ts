@@ -10,6 +10,7 @@ import { BugOperationsService } from './bugTracker/services/BugOperations.servic
 
 import { TrimTextPipe } from './bugTracker/pipes/trimText.pipe';
 import { SortPipe } from './bugTracker/pipes/sort.pipe';
+import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SortPipe } from './bugTracker/pipes/sort.pipe';
     , BugTrackerComponent
     , TrimTextPipe
     , SortPipe
+    , ClosedCountPipe
   ],
   imports: [
     BrowserModule
