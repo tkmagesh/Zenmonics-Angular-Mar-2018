@@ -21,12 +21,7 @@ export class BugTrackerComponent{
 	
 
 	constructor(private bugOperations : BugOperationsService){
-		this.bugs.push(this.bugOperations.createNew('Server communications failure'));
-		this.bugs.push(this.bugOperations.createNew('Application not responding'));
-		this.bugs.push(this.bugOperations.createNew('User actions not recognized'));
-		this.bugs.push(this.bugOperations.createNew('Data integrity checks failed'));
-
-		console.log(Promise);
+		this.bugs = this.bugOperations.getAll();
 	}
 
 	
@@ -40,7 +35,11 @@ export class BugTrackerComponent{
 	}
 
 	onRemoveClosedClick(){
-		this.bugs = this.bugs.filter(bug => !bug.isClosed);
+		this.bugs
+			.filter(bug => bug.isClosed)
+			.forEach(closedBug => this.bugOperations.remove(closedBug));
+		this.bugs = this.bugOperations.getAll();
+
 	}
 
 }
