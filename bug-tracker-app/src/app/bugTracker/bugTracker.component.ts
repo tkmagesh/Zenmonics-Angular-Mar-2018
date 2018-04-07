@@ -15,8 +15,14 @@ export class BugTrackerComponent{
 		this.bugOperations = _bugOperations;
 	}*/
 
+	sortBugBy : string = 'name';
+	sortBugDescending : boolean = false;
+	
 	constructor(private bugOperations : BugOperationsService){
-
+		this.bugs.push(this.bugOperations.createNew('Server communications failure'));
+		this.bugs.push(this.bugOperations.createNew('Application not responding'));
+		this.bugs.push(this.bugOperations.createNew('User actions not recognized'));
+		this.bugs.push(this.bugOperations.createNew('Data integrity checks failed'));
 	}
 
 	
