@@ -1,0 +1,5 @@
+using jQuery in angular
+handling xss
+logging
+
+ashish.mishra@zenmonics.com

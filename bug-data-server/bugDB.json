@@ -1,16 +1,32 @@
 {
   "bugs": [
     {
-      "id": 8,
+      "id": 7,
       "name": "Server is not responding",
       "isClosed": false,
-      "createdAt": "2018-02-16T08:26:39.533Z"
+      "createdAt": "2018-02-16T08:26:39.533Z",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      "id": 11,
-      "name": "Bugs are not removed",
+      "id": 10,
+      "name": "Observables are not obeserving",
+      "isClosed": true,
+      "createdAt": "2018-03-16T08:19:06.673Z",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": 12,
+      "name": "Data integrity checks failed",
       "isClosed": false,
-      "createdAt": "2018-04-08T07:58:52.259Z"
+      "createdAt": "2018-03-28T10:28:33.424Z",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": 13,
+      "name": "This is to demo routing",
+      "isClosed": false,
+      "createdAt": "2018-03-28T11:45:52.035Z",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quibusdam, perspiciatis quia eligendi velit consectetur quod saepe, a repudiandae hic possimus voluptate nobis, at harum molestiae iure explicabo beatae eveniet!"
     }
   ],
   "projects": [
