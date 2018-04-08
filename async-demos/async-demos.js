@@ -47,11 +47,22 @@ var pgm = (function(){
 		return addAsyncEvents;
 	})();
 
-	
+	function addAsyncPromise(x,y){
+		var promise = new Promise(function(resolve, reject){
+			console.log(`	[@Service] - processing ${x} and ${y}`);
+			setTimeout(function(){
+				var result = x + y;
+				console.log(`	[@Service] - returning the result`);
+				resolve(result);
+			}, 3000);
+		});
+		return promise;
+	}
 	
 	return {
 		addSyncClient : addSyncClient,
 		addAsyncClient : addAsyncClient,
-		addAsyncEvents : addAsyncEvents
+		addAsyncEvents : addAsyncEvents,
+		addAsyncPromise : addAsyncPromise
 	};
 })();
