@@ -30,8 +30,28 @@ var pgm = (function(){
 		});
 		
 	}
+
+	var addAsyncEvents = (function(){
+		var _callbacks = [];
+		function addAsyncEvents(x,y){
+			console.log(`	[@Service] - processing ${x} and ${y}`);
+			setTimeout(function(){
+				var result = x + y;
+				console.log(`	[@Service] - returning the result`);
+				_callbacks.forEach(callback => callback(result));
+			}, 3000);
+		}
+		addAsyncEvents.subscribe = function(callback){
+			_callbacks.push(callback);
+		}
+		return addAsyncEvents;
+	})();
+
+	
+	
 	return {
 		addSyncClient : addSyncClient,
-		addAsyncClient : addAsyncClient
-	}
+		addAsyncClient : addAsyncClient,
+		addAsyncEvents : addAsyncEvents
+	};
 })();
