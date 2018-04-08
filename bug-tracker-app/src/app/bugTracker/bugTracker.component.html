@@ -17,7 +17,7 @@
 				(click)="onBugNameClick(bug)">
 				{{  bug.name | trimText:40 }}
 			</span>
-			<div class="datetime">[Created At]</div>
+			<div class="datetime" title="{{bug.createdAt | date:'dd-MMM-yyyy hh:mm:ss a'}}">Created At : {{bug.createdAt | elapsed}}</div>
 		</li>
 		
 	</ol>

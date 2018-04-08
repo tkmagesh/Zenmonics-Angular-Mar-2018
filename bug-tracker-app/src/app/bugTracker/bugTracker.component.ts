@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Bug } from './models/Bug';
 import { BugOperationsService } from './services/BugOperations.service';
+import * as moment from 'moment';
+
+console.log(moment);
 
 @Component({
 	selector : 'app-bug-tracker',

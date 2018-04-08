@@ -11,6 +11,8 @@ import { BugStorageService } from './bugTracker/services/BugStorage.service';
 
 import { TrimTextPipe } from './bugTracker/pipes/trimText.pipe';
 import { SortPipe } from './bugTracker/pipes/sort.pipe';
+import { ElapsedPipe } from './bugTracker/pipes/elapsed.pipe';
+
 import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
 
 
@@ -23,6 +25,7 @@ import { BugAddComponent } from './bugTracker/views/bugAdd.component';
     , BugTrackerComponent
     , TrimTextPipe
     , SortPipe
+    , ElapsedPipe
     , ClosedCountPipe
     , BugStatsComponent
     , BugAddComponent
