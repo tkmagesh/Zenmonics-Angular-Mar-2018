@@ -1,34 +1,16 @@
 {
   "bugs": [
     {
-      "id": 6,
-      "name": "Promises are not promising",
-      "isClosed": false,
-      "createdAt": "2018-02-10T10:42:33.081Z"
-    },
-    {
-      "id": 7,
-      "name": "routing is not routing",
-      "isClosed": false,
-      "createdAt": "2018-02-10T11:53:44.160Z"
-    },
-    {
       "id": 8,
       "name": "Server is not responding",
       "isClosed": false,
       "createdAt": "2018-02-16T08:26:39.533Z"
     },
     {
-      "id": 9,
-      "name": "Async doesnt work",
+      "id": 11,
+      "name": "Bugs are not removed",
       "isClosed": false,
-      "createdAt": "2018-02-16T08:40:50.456Z"
-    },
-    {
-      "id": 10,
-      "name": "unable to add a new bug",
-      "isClosed": true,
-      "createdAt": "2018-02-16T10:20:20.393Z"
+      "createdAt": "2018-04-08T07:58:52.259Z"
     }
   ],
   "projects": [

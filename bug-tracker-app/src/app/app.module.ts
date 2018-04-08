@@ -9,6 +9,7 @@ import { BugTrackerComponent } from './bugTracker/bugTracker.component';
 
 import { BugOperationsService } from './bugTracker/services/BugOperations.service';
 import { BugStorageService } from './bugTracker/services/BugStorage.service';
+import { BugServerService } from './bugTracker/services/BugServer.service';
 
 import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
 
@@ -31,7 +32,8 @@ import { BugAddComponent } from './bugTracker/views/bugAdd.component';
   ],
   providers: [
   	BugOperationsService,
-    BugStorageService
+    BugStorageService,
+    BugServerService
   ],
   bootstrap: [AppComponent]
 })
