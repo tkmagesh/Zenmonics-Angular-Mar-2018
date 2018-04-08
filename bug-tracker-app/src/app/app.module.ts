@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { UtilsModule } from './utils/utils.module';
 
@@ -29,6 +30,7 @@ import { BugAddComponent } from './bugTracker/views/bugAdd.component';
     BrowserModule
     , FormsModule
     , UtilsModule
+    , HttpModule
   ],
   providers: [
   	BugOperationsService,

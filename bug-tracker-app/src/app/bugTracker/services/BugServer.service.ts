@@ -1,29 +1,36 @@
+import { Injectable } from '@angular/core';
 import { Bug } from '../models/Bug';
-import axios from 'axios';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
+@Injectable()
 export class BugServerService{
 	private baseUrl : string = 'http://localhost:3000/bugs';
 
-	getAll() : Promise<Bug[]>{
-		return axios
+	constructor(private http : Http){
+
+	}
+	getAll() : Observable<Bug[]>{
+		return this.http
 			.get(this.baseUrl)
-			.then(response => response.data);
+			.map(response => response.json())
 	}
 
-	addNew(newBugData : Bug) : Promise<Bug>{
-		return axios
+	addNew(newBugData : Bug) : Observable<Bug>{
+		return this.http
 			.post(this.baseUrl, newBugData)
-			.then(response => response.data);
+			.map(response => response.json());
 	}
 
-	save(bugData : Bug) : Promise<Bug> {
-		return axios
+	save(bugData : Bug) : Observable<Bug> {
+		return this.http
 			.put(`${this.baseUrl}/${bugData.id}`, bugData)
-			.then(response => response.data);
+			.map(response => response.json());
 	}
-	remove(bug : Bug) : Promise<any> {
-		return axios
+	remove(bug : Bug) : Observable<any> {
+		return this.http
 			.delete(`${this.baseUrl}/${bug.id}`)
-			.then(response => response.data);
+			.map(response => response.json());
 	}
 }

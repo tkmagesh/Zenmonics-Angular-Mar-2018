@@ -25,7 +25,7 @@ export class BugAddComponent{
 	onAddNewClick(){
 		this.bugOperations
 			.createNew(this.newBugName)
-			.subscribe(newBug => {
+			.then(newBug => {
 				this.newBugName = '';
 				this.created.emit(newBug);		
 			})
